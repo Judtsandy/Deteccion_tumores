@@ -25,10 +25,7 @@
                     <img src="{{ url_for('static', filename='uploads/' + original_image.split('/')[-1]) }}" alt="Original">
                 </div>
                 
-                <div class="image-card">
-                    <h3>MRI del cerebro</h3>
-                    <img src="{{ url_for('static', filename=result_images.contours) }}" alt="Contornos">
-                </div>
+                
                 
                 <div class="image-card">
                     <h3>MRI con mapa de calor</h3>
@@ -38,9 +35,9 @@
             
             <div class="diagnosis">
                 {% if has_tumor %}
-                <p class="alert danger">TUMOR DETECTADO (Nivel de Confianza: {{ confidence }})</p>
+                <p class="alert danger">TUMOR DETECTADO</p>
                 {% else %}
-                <p class="alert success">No se detectaron tumores (Nivel de Confianza: {{ confidence }})</p>
+                <p class="alert success">No se detectaron tumores</p>
                 {% endif %}
             </div>
         </div>
